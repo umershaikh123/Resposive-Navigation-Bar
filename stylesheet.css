@@ -1,0 +1,155 @@
+:root {
+ 
+    --clr-primary-4: hsl(205, 63%, 48%);
+    --clr-primary-5: hsl(205, 78%, 60%);
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+}
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+
+
+
+nav {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.384);
+}
+
+.nav-center{           
+    max-width: 1440px;
+    width: 95%; 
+    margin: 0 auto;
+    padding: 1rem;   
+     
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.nav-header h2 {
+    color: rgba(28, 160, 201, 0.74);
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    line-height: 1.25;
+    font-family: var(--ff-primary);
+  }
+
+
+
+  .nav-toggle{  
+    font-size: 1.5rem;
+    color: var(--clr-primary-5);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: var(--clr-primary-1);
+    transform: rotate(90deg);
+  }
+
+
+
+.links{
+    height: 0;  
+    overflow: hidden;      
+    transition: var(--transition);
+  }
+
+.links li , .socila-icons li {
+    list-style: none;
+}  
+ 
+
+.links li a{
+    color: var(--clr-grey-3);
+    font-size: x-large;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 0.5rem;
+    transition: var(--transition);
+    text-decoration: none;
+    color: black;
+    
+}  
+
+.links a:hover {
+    background:  rgb(28, 160, 201, 0.74);
+    color: white;
+    padding-left: 1.5rem;
+  }
+
+
+
+  .show-links {
+    height: 10rem;
+  }
+ 
+  @media only screen and (max-width:800px){
+    .social-icons li {
+        display: none;
+       }
+
+  }
+
+
+  @media only screen and (min-width: 800px) {
+    .nav-center {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+    }
+  
+    .links {
+      height: auto;
+      display: flex;
+    }
+
+    .links a {
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+
+    .nav-toggle {
+        display: none;
+       }
+
+
+    .social-icons {
+        display: flex;
+      }
+      .social-icons li {
+       list-style: none;
+      }
+      .social-icons a {
+        margin: 0 0.5rem;
+        color: var(--clr-primary-5);
+        transition: var(--transition);
+      }
+      .social-icons a:hover {
+        color: var(--clr-primary-7);
+      }
+}
